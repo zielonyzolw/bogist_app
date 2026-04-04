@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../ble/ble_service.dart';
+import 'auto_test_page.dart';
 import 'debug_page.dart';
 import 'test_lab_page.dart';
 
@@ -105,6 +106,12 @@ class DashboardPage extends StatelessWidget {
               icon: const Icon(Icons.science_outlined),
               label: const Text('Test Lab (Commands)'),
               onPressed: () => _push(context, const TestLabPage()),
+            ),
+            const SizedBox(height: 10),
+            FilledButton.tonalIcon(
+              icon: const Icon(Icons.play_circle_outline_rounded),
+              label: const Text('Auto Test Lab'),
+              onPressed: () => _push(context, const AutoTestPage()),
             ),
             const SizedBox(height: 10),
             OutlinedButton.icon(
